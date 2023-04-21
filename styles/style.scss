@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  font-family: "Lato", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  background: #f0eeee;
+  .loading {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .filter-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #2b2b2b;
+    z-index: 2;
+    color: white;
+    margin-bottom: 25px;
+
+    .filters {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .logo img {
+        max-height: 60px;
+      }
+      .controls {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        gap: 10px;
+        label {
+          align-items: center;
+          display: flex;
+          font-weight: 300;
+          font-size: 13px;
+          select {
+            width: 100px;
+            height: 30px;
+            border-radius: 6px;
+            margin-left: 10px;
+            padding: 0px 5px;
+          }
+          input {
+            height: 20px;
+            width: 20px;
+            border-radius: 6px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+    .popup {
+      background: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      .popup-inner {
+        background: white;
+        padding: 50px;
+        position: relative;
+        button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          border: 1px solid gray;
+          border-radius: 14px;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img,
+        video {
+          height: 50vh;
+          width: auto;
+          object-fit: cover;
+        }
+        .IVTD {
+          display: flex;
+          gap: 20px;
+          .TD {
+            .title {
+              font-size: 14px;
+              font-weight: 400;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 250px;
+          }
+        }
+        .info {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+          span {
+            background: red;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .galerry-card {
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      transition: opacity 0.3s ease-in-out;
+      position: relative;
+      &:hover {
+        opacity: 90%;
+        transition: opacity 0.3s ease-in-out;
+      }
+      img,
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        max-height: 300px;
+        min-height: 290px;
+      }
+
+      .album-label {
+        background: #b5b9bd;
+        border-radius: 5px;
+        color: black;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 1;
+        font-size: 13px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        img {
+          padding: 3px;
+          max-width: 20px;
+          max-height: 20px;
+          min-height: initial;
+        }
+      }
+      .thumbnail {
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        padding: 10px;
+
+        video,
+        img {
+          border-radius: 5px;
+        }
+        .description {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 80px;
+          width: 100%;
+          background: #fff;
+          display: flex;
+          justify-content: flex-start;
+          padding: 10px;
+          font-weight: 300;
+          font-size: 14px;
+          > div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-height: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
