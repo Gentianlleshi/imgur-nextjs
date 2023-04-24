@@ -1,9 +1,9 @@
 import { GalleryImage } from "@/pages/store/types";
 import { SetStateAction } from "react";
-import { Video } from "./Video";
-import { Image } from "./Image";
+import Video from "./Video";
+import Image from "./Image";
 
-export function Modal({
+export default function Modal({
   currentItem,
   setCurrentItem,
 }: {

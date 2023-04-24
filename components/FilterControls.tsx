@@ -9,7 +9,7 @@ import {
 import logo from "../assets/img/imgur.png";
 import Link from "next/link";
 
-export function FilterControls() {
+export default function FilterControls() {
   const filters = useSelector((state: RootState) => state.filters);
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ export function FilterControls() {
       <div className="filters">
         <div className="logo">
           <Link href="/">
-            <img src={logo.src} alt="" />
+            <img src={logo.src} alt="logo" />
           </Link>
         </div>
         <div className="controls">

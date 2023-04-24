@@ -1,11 +1,11 @@
 import { GalleryImage, GalleryAlbum } from "@/pages/store/types";
 import { SetStateAction } from "react";
-import { Video } from "./Video";
-import { Image } from "./Image";
+import Video from "./Video";
+import Image from "./Image";
 import Link from "next/link";
 import galleryIcon from "../assets/img/gallery-icon.png";
 
-function setModalData({
+export default function setModalData({
   item,
   is_album,
   setCurrentItem,

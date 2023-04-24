@@ -1,6 +1,6 @@
 import { GalleryAlbum, GalleryImage } from "@/pages/store/types";
 
-export function Video({ item }: { item: GalleryImage }) {
+export default function Video({ item }: { item: GalleryImage }) {
   return (
     <video
       src={item.link}
