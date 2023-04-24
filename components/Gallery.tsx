@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { GalleryAlbum, GalleryImage } from "../pages/store/types";
 import { RootState } from "@/pages/store/store";
 import { useSelector } from "react-redux";
-import Modal from "./Modal";
+import { Modal } from "./Modal";
 import { Item } from "./Item";
 export default function Gallery() {
   const filter = useSelector((state: RootState) => state.filters);

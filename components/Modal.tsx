@@ -3,7 +3,7 @@ import { SetStateAction } from "react";
 import Video from "./Video";
 import Image from "./Image";
 
-export default function Modal({
+export function Modal({
   currentItem,
   setCurrentItem,
 }: {

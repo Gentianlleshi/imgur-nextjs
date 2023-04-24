@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getAlbum } from "./api/imgur";
 import { GalleryAlbum, GalleryImage } from "./store/types";
 // import Modal from "@/components/Modal";
-import Modal from "@/components/Modal";
+import { Modal } from "@/components/Modal";
 import { Item } from "@/components/Item";
 import Link from "next/link";
 import logo from "../assets/img/imgur.png";
