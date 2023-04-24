@@ -61,7 +61,7 @@ export function FilterControls() {
           {/* <br /> */}
           <label>
             <select value={filters.sort} onChange={handleSortChange}>
-              <option value="">Sort</option>
+              {/* <option value="">Sort</option> */}
               <option value="viral">Viral</option>
               <option value="top">Top</option>
               <option value="time">Time</option>
@@ -72,7 +72,7 @@ export function FilterControls() {
           {filters.section === "top" && (
             <label>
               <select value={filters.window} onChange={handleWindowChange}>
-                <option value="">Period</option>
+                {/* <option value="">Period</option> */}
                 <option value="day">Day</option>
                 <option value="week">Week</option>
                 <option value="month">Month</option>
