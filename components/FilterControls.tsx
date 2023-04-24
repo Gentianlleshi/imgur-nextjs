@@ -7,6 +7,7 @@ import {
   setWindow,
 } from "../pages/store/reducers";
 import logo from "../assets/img/imgur.png";
+import Link from "next/link";
 
 export function FilterControls() {
   const filters = useSelector((state: RootState) => state.filters);
@@ -38,7 +39,9 @@ export function FilterControls() {
     <div className="filter-wrapper">
       <div className="filters">
         <div className="logo">
-          <img src={logo.src} alt="" />
+          <Link href="/">
+            <img src={logo.src} alt="" />
+          </Link>
         </div>
         <div className="controls">
           <label>
@@ -59,28 +62,29 @@ export function FilterControls() {
             </select>
           </label>
           {/* <br /> */}
-          <label>
-            <select value={filters.sort} onChange={handleSortChange}>
-              {/* <option value="">Sort</option> */}
-              <option value="viral">Viral</option>
-              <option value="top">Top</option>
-              <option value="time">Time</option>
-              <option value="rising">Rising</option>
-            </select>
-          </label>
-          {/* <br /> */}
-          {filters.section === "top" && (
+          {filters.section === "user" && (
             <label>
-              <select value={filters.window} onChange={handleWindowChange}>
-                {/* <option value="">Period</option> */}
-                <option value="day">Day</option>
-                <option value="week">Week</option>
-                <option value="month">Month</option>
-                <option value="year">Year</option>
-                <option value="all">All</option>
+              <select value={filters.sort} onChange={handleSortChange}>
+                {/* <option value="">Sort</option> */}
+                <option value="viral">Viral</option>
+                <option value="top">Top</option>
+                <option value="time">Time</option>
+                <option value="rising">Rising</option>
               </select>
             </label>
           )}
+          {/* <br /> */}
+
+          <label>
+            <select value={filters.window} onChange={handleWindowChange}>
+              {/* <option value="">Period</option> */}
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="year">Year</option>
+              <option value="all">All</option>
+            </select>
+          </label>
         </div>
       </div>
     </div>

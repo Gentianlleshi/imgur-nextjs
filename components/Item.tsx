@@ -72,7 +72,7 @@ export function Item({
           {is_album ? <div>{item.title}</div> : <div>{image.title}</div>}
         </div>
       </div>
-      {is_album && <Link href="/[albumId]" as={`/${galleryItem.id}`}></Link>}
+      {/* {is_album && <Link href="/[albumId]" as={`/${galleryItem.id}`}></Link>} */}
     </>
   );
 }
