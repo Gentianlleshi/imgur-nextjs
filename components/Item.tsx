@@ -54,10 +54,12 @@ export function Item({
   return (
     <>
       {is_album && galleryItem.images.length > 1 && (
-        <div className="album-label">
-          <img src={galleryIcon.src} width={20} height={20}></img>{" "}
-          <span>{galleryItem.images.length}</span>
-        </div>
+        <Link href="/[albumId]" as={`/${galleryItem.id}`}>
+          <div className="album-label">
+            <img src={galleryIcon.src} width={20} height={20}></img>{" "}
+            <span>{galleryItem.images.length}</span>
+          </div>
+        </Link>
       )}
       <div
         className="thumbnail"
@@ -70,11 +72,7 @@ export function Item({
           {is_album ? <div>{item.title}</div> : <div>{image.title}</div>}
         </div>
       </div>
-      {is_album && (
-        <Link href="/[albumId]" as={`/${galleryItem.id}`}>
-          View gallery
-        </Link>
-      )}
+      {is_album && <Link href="/[albumId]" as={`/${galleryItem.id}`}></Link>}
     </>
   );
 }
