@@ -52,7 +52,7 @@ export function FilterControls() {
           {/* <br /> */}
           <label>
             <select value={filters.section} onChange={handleSectionChange}>
-              <option value="">Section</option>
+              {/* <option value="">Section</option> */}
               <option value="hot">Hot</option>
               <option value="top">Top</option>
               <option value="user">User</option>
