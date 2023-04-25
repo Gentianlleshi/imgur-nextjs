@@ -1,4 +1,4 @@
-import { GalleryAlbum, GalleryImage } from "@/pages/store/types";
+import { GalleryAlbum, GalleryImage } from "@/store/types";
 
 export default function Video({ item }: { item: GalleryImage }) {
   return (

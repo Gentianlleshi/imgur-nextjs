@@ -1,7 +1,7 @@
 import { getGallery } from "@/pages/api/imgur";
 import { useEffect, useState } from "react";
-import { GalleryAlbum, GalleryImage } from "../pages/store/types";
-import { RootState } from "@/pages/store/store";
+import { GalleryAlbum, GalleryImage } from "../store/types";
+import { RootState } from "@/store/store";
 import { useSelector } from "react-redux";
 import { Modal } from "./Modal";
 import { Item } from "./Item";

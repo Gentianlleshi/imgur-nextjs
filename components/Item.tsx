@@ -1,4 +1,4 @@
-import { GalleryImage, GalleryAlbum } from "@/pages/store/types";
+import { GalleryImage, GalleryAlbum } from "@/store/types";
 import { SetStateAction } from "react";
 import Video from "./Video";
 import Image from "./Image";

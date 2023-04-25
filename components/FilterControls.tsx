@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../pages/store/store";
+import { RootState } from "../store/store";
 import {
   setShowViral,
   setSection,
   setSort,
   setWindow,
-} from "../pages/store/reducers";
+} from "../store/reducers";
 import logo from "../assets/img/imgur.png";
 import Link from "next/link";
 

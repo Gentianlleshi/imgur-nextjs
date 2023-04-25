@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getAlbum } from "./api/imgur";
-import { GalleryAlbum, GalleryImage } from "./store/types";
+import { GalleryAlbum, GalleryImage } from "../store/types";
 // import Modal from "@/components/Modal";
 import { Modal } from "@/components/Modal";
 import { Item } from "@/components/Item";

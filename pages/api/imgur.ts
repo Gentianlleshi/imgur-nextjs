@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GalleryAlbum } from "../store/types";
+import { GalleryAlbum } from "../../store/types";
 
 // Create a type for the filter
 export type GalleryFilter = {
